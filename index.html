@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Probabilidad de Vulnerabilidad Crítica</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <h1>Calculadora de Probabilidad de Vulnerabilidad Crítica</h1>
+
+  <form id="probabilidad-form">
+    <div>
+      <label for="probabilidad-windows">Porcentaje de sistemas Windows (%):</label>
+      <input type="number" name="probabilidad-windows" id="probabilidad-windows" step="0.01" min="0" max="100" required>
+      <label for="vulnerabilidad-windows">Probabilidad de vulnerabilidad crítica en Windows (%):</label>
+      <input type="number" name="vulnerabilidad-windows" id="vulnerabilidad-windows" step="0.01" min="0" max="100" required>
+    </div>
+    <div>
+      <label for="probabilidad-linux">Porcentaje de sistemas Linux (%):</label>
+      <input type="number" name="probabilidad-linux" id="probabilidad-linux" step="0.01" min="0" max="100" required>
+      <label for="vulnerabilidad-linux">Probabilidad de vulnerabilidad crítica en Linux (%):</label>
+      <input type="number" name="vulnerabilidad-linux" id="vulnerabilidad-linux" step="0.01" min="0" max="100" required>
+    </div>
+    <div>
+      <label for="probabilidad-mac">Porcentaje de sistemas Mac (%):</label>
+      <input type="number" name="probabilidad-mac" id="probabilidad-mac" step="0.01" min="0" max="100" required>
+      <label for="vulnerabilidad-mac">Probabilidad de vulnerabilidad crítica en Mac (%):</label>
+      <input type="number" name="vulnerabilidad-mac" id="vulnerabilidad-mac" step="0.01" min="0" max="100" required>
+    </div>
+    <button type="button" onclick="calcularProbabilidad()">Calcular</button>
+  </form>
+
+  <div id="resultado">
+    <p>La probabilidad de que un equipo tenga una vulnerabilidad crítica es: <span id="probabilidad-resultado"></span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
